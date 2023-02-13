@@ -11,7 +11,7 @@ I learned how to combine different javascript syntax in order to create a websit
 
 ## Usage
 
-    ![screenshot](assets/images/screenshot.png)
+[screenshot](assets/images/screenshot.png)
 
 ## Credits
 
