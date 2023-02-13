@@ -125,7 +125,7 @@ function generatePassword () {
   var character
   let newpswd = []
 
-  criteria.length = ''
+  //criteria.length = ''
   length = ''
 
   //loop to add criteria to password
@@ -152,7 +152,7 @@ function generatePassword () {
           prompts()
 
           //keep adding characters until length =  length user set
-          while (criteria.length < length) {
+          while (newpswd.length < length) {
             if (lowercase === false && uppercase === false && number === false && character === false) {
               alert('you must choose at least one criteria.')
               prompts()
@@ -160,7 +160,7 @@ function generatePassword () {
             
             else {
               //adds lowercase one at a time
-              if (lowercase === true && criteria.length < length) {
+              if (lowercase === true && newpswd.length < length) {
                 var lc = criteria.lowercase[Math.floor(Math.random() * 26)]
                 pswd = criteria.length + lc
                 newpswd.push(pswd)
@@ -168,7 +168,7 @@ function generatePassword () {
               console.log(lc)
 
               // adds uppercase one at a time
-              if (uppercase === true && criteria.length < length) {
+              if (uppercase === true && newpswd.length < length) {
                 var uc = criteria.uppercase[Math.floor(Math.random() * 26)]
                 pswd = criteria.length + uc
                 newpswd.push(pswd)
@@ -176,7 +176,7 @@ function generatePassword () {
               console.log(uc)
 
               //adds characters one at a time
-              if (character === true && criteria.length < length) {
+              if (character === true && newpswd.length < length) {
                 var sc = criteria.character[Math.floor(Math.random() * 32)]
                 pswd = criteria.length + sc
                 newpswd.push(pswd)
@@ -184,24 +184,20 @@ function generatePassword () {
               console.log(sc)
 
               // adds number one at a time
-              if (number === true && criteria.length < length) {
+              if (number === true && newpswd.length < length) {
                 var num = criteria.number[Math.floor(Math.random() * 10)]
                 pswd = criteria.length + num
                 newpswd.push(pswd)
               }
               console.log(num)
-
-              
             }
-            if ((criteria.length = length)) {
-                var newpass = newpswd.join('')
-                return newpass
-              }
+
           }
         }
       }
       console.log(newpswd)
-      //return newpswd;
+      var newpass = newpswd.join('')
+      return newpass;
 
       //function to show prompts when clicking generate password
       function prompts () {
