@@ -11,6 +11,8 @@ I learned how to combine different javascript syntax in order to create a websit
 
 ## Usage
 
+https://keberlea.github.io/akpassgen/
+
 [screenshot](assets/images/screenshot.png)
 
 ## Credits
